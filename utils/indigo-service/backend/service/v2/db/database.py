@@ -6,7 +6,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker  # type: ignore
 from ..common.config import BINGO_POSTGRES
 
 HAS_BINGO_DB = len(BINGO_POSTGRES["password"]) > 0
-
+HAS_BINGO_DB = False
 
 def connect():
     return psycopg2.connect(**BINGO_POSTGRES)
